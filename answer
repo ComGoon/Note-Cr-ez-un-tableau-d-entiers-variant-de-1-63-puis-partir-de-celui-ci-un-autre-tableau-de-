@@ -1,0 +1,47 @@
+//Author: Oussoumane Mahaman Madani (GoMyCode)
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: comgoon
+ * Date: 8/7/18
+ * Time: 11:53 AM
+ */
+
+//holding the get_defined_constants() in a var named: $preDefinedConst
+$preDefinedConst = get_defined_constants();
+
+?>
+
+
+
+
+<!-- creating a table in html and put the data of $preDefinedConst -->
+<html>
+<head>
+    <title>Array 1-63</title>
+</head>
+
+<body>
+<table border ="2">
+    <tr>
+        <th>Nom de la Constante</th>
+        <th>La valeur</th>
+    </tr>
+
+    <?php
+    foreach($preDefinedConst as $index => $value){
+        ?>
+        <tr>
+            <td><?= $index ?></td>
+            <td><?= $value ?></td>
+        </tr>
+        <?php
+
+    }
+    ?>
+</table>
+
+
+
+</html>
